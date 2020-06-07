@@ -1,24 +1,24 @@
 # jianshu
 
-## Project setup
+## 开发
 ```
+# 克隆项目
+
+git clone https://github.com/hu19940121/jianshu.git
+
+# 进入项目目录
+
+cd jianshu
+# 安装依赖
+
 yarn install
+
+# 启动服务
+yarn run serve
 ```
 
-### Compiles and hot-reloads for development
+## 发布
 ```
-yarn serve
-```
+npm run build
 
-### Compiles and minifies for production
 ```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
