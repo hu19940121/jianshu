@@ -45,17 +45,13 @@ module.exports = {
       //     '^/api': '/api'
       //   }
       // },
-      [process.env.VUE_APP_BASE_API]: {
-        target: `http://localhost:${port}/mock`,
-        changeOrigin: true,
-        pathRewrite: {
-          ['^' + process.env.VUE_APP_BASE_API]: ''
-        }
+      '/planet/api': {
+        // target: 'http://192.168.3.183:8085',
+        target: 'https://v2.vipyunxiao.com',
+        changeOrigin: true
       }
-    },
-    // after: require('./mock/mock-server.js')
-
-    before: require('./mock/mock-server.js')
+    }
+    // before: require('./mock/mock-server.js')
   },
   configureWebpack: {
     // provide the app's title in webpack's name field, so that

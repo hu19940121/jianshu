@@ -2,10 +2,10 @@
   <div>
     <div class="home">
       <el-row :gutter="50">
-        <el-col :span="16">
+        <el-col :span="device!=='mobile' ? 16 : 24">
           <article-list />
         </el-col>
-        <el-col :span="8" hidden-xs-only>
+        <el-col v-show="device!=='mobile'" :span="8">
           <recommend-list />
         </el-col>
       </el-row>
@@ -20,14 +20,19 @@ export default {
   components: {
     articleList,
     recommendList
+  },
+  computed: {
+    device() {
+      return this.$store.state.app.device
+    }
   }
 }
 </script>
 
 <style lang="scss" scoped>
 .home{
-  width: 960px;
-  padding-top: 20px;
+  max-width: 960px;
+  padding: 20px;
   margin: 0 auto;
 
 }

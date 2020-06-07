@@ -6,11 +6,28 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/login',
-    component: () => import('@/views/login'),
-    meta: {
-      title: '登陆'
-    }
+    path: '/user',
+    component: () => import('@/views/user'),
+    redirect: '/user/login',
+    children: [
+      {
+        path: '/user/login',
+        name: 'Login',
+        component: () => import('@/views/user/login'),
+        meta: { title: '登陆' }
+      },
+      {
+        path: '/user/register',
+        name: 'Register',
+        component: () => import('@/views/user/register'),
+        meta: { title: '注册' }
+      }
+    ]
+  },
+  {
+    path: '/publishArticle',
+    component: () => import('@/views/publishArticle'),
+    meta: { title: '发布文章' }
   },
   {
     path: '/',

@@ -2,7 +2,6 @@
   <div class="acticle-item">
     <router-link to="/articeDetail">
       <a class="title">真正的孤独（经典好文）</a>
-
     </router-link>
     <div class="desc margin-bottom-xs">
       文：贾平凹 好多人在说自己孤独，说自己孤独的人其实并不孤独。孤独不是受到了冷落和遗弃，而是无知己，不被理解。真正的孤独者不言孤独，偶尔做些长啸好多人在说自己孤独，说自己孤独的人其实并不孤独。孤独不是受到了冷落和遗弃，而是无知己，不被理解。真正的孤独者不言孤独，偶尔做些长啸好多人在说自己孤独，说自己孤独的人其实并不孤独。孤独不是受到了冷落和遗弃，而是无知己，不被理解。真正的孤独者不言孤独，偶尔做些长啸
@@ -64,7 +63,7 @@ export default {
     font-size: 18px;
     font-weight: 700;
     line-height: 1.5;
-    color: #969696;
+    color: #333;
     &:hover{
       text-decoration: underline;
     }
