@@ -16,12 +16,21 @@ const routes = [
     path: '/',
     component: Layout,
     redirect: '/home',
-    children: [{
-      path: 'home',
-      name: 'Home',
-      component: () => import('@/views/Home/index'),
-      meta: { title: '首页' }
-    }]
+    children: [
+      {
+        path: '/home',
+        name: 'Home',
+        component: () => import('@/views/Home/index'),
+        meta: { title: '首页' }
+      },
+      {
+        path: '/articeDetail',
+        name: 'ArticeDetail',
+        component: () => import('@/views/articeDetail/index'),
+        meta: { title: '文章详情' }
+      }
+
+    ]
   },
   {
     path: '/404',

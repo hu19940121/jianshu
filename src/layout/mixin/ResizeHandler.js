@@ -1,7 +1,7 @@
 import store from '@/store'
 
 const { body } = document
-const WIDTH = 992 // refer to Bootstrap's responsive design
+const WIDTH = 992 // refer to Bootstrap's responsive design    <992 think is mobile
 
 export default {
   watch: {
@@ -21,7 +21,6 @@ export default {
     const isMobile = this.$_isMobile()
     if (isMobile) {
       store.dispatch('app/toggleDevice', 'mobile')
-      store.dispatch('app/closeSideBar', { withoutAnimation: true })
     }
   },
   methods: {
@@ -35,10 +34,6 @@ export default {
       if (!document.hidden) {
         const isMobile = this.$_isMobile()
         store.dispatch('app/toggleDevice', isMobile ? 'mobile' : 'desktop')
-
-        if (isMobile) {
-          store.dispatch('app/closeSideBar', { withoutAnimation: true })
-        }
       }
     }
   }

@@ -1,6 +1,8 @@
 <template>
-  <div :class="classObj" class="app-wrapper">
-    <Header />
+  <div class="app-wrapper">
+    <sticky :z-index="10">
+      <Header />
+    </sticky>
     <div class="main-container">
       <app-main />
     </div>
@@ -9,12 +11,18 @@
 
 <script>
 import { Header, AppMain } from './components'
+import Sticky from '@/components/Sticky' // 粘性header组件
+import ResizeMixin from './mixin/ResizeHandler'
+
 export default {
   name: 'Layout',
   components: {
     Header,
-    AppMain
+    AppMain,
+    Sticky
   },
+  mixins: [ResizeMixin],
+
   computed: {
   },
   methods: {
